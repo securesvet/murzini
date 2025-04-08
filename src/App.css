@@ -1,41 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+:root {
+  --background-color: rgba(255, 255, 255, 0.85);
+  --accent-color: #b32d00;
+  --text-color: #333;
+  --font-family: "Georgia", serif;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px) brightness(0.6);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 90vh;
   padding: 2rem;
+}
+
+.menu-card, .welcome-card {
+  background: var(--background-color);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  max-width: 800px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  line-height: 1.7;
+}
+
+.welcome-card {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.welcome-card-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.signature {
+  text-align: right;
+  font-style: italic;
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.menu-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-content {
+  flex-grow: 1;
 }
