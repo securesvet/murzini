@@ -1,0 +1,37 @@
+{
+  "hash": "45fa2273",
+  "configHash": "5a8c77a8",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "61b29f87",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "c7509627",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "79a4e3f6",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "26c725bf",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "b11e14e5",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-FVS4AYBA": {
+      "file": "chunk-FVS4AYBA.js"
+    }
+  }
+}
