@@ -44,7 +44,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
-      url: securesvet.github.io/murzini/
+      url: https://securesvet.github.io/murzini/
 
     steps:
       - name: Download artifact
