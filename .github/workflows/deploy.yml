@@ -31,22 +31,25 @@ jobs:
         run: |
           deno task build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v4
         with:
-          name: github-pages
-          path: ./dist # Vite's default output dir
+          name: production-files
+          path: ./dist
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
