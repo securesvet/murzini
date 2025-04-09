@@ -1,6 +1,29 @@
 import Header from "./Header.tsx";
 import "./App.css";
 
+// Dishes
+import margherita from "/menu/margherita.png";
+import carbonara from "/menu/carbonara.png";
+import cheeseburger from "/menu/cheeseburger.png";
+import salad from "/menu/salad.png";
+
+// Desserts
+import cheesecake from "/menu/cheesecake.png";
+import snickers from "/menu/snickers.png";
+import mars from "/menu/mars.png";
+import icecream from "/menu/icecream.png";
+
+// Drinks
+import tea from "/menu/tea.png";
+import beer from "/menu/beer.png";
+import cider from "/menu/cider.png";
+import wine from "/menu/wine.png";
+import fantaser from "/menu/fantaser.png";
+import kakashka from "/menu/kakashka.png";
+import jagermeister from "/menu/jagermeister.png";
+import cola from "/menu/cola.png";
+import hookah from "/menu/hookah.png";
+
 import italia from "/italian-background.jpeg?url";
 import murzini from "/murzini-transparent-logo.png?url";
 
@@ -11,27 +34,25 @@ function App() {
         name: "Охуенная пицца",
         description: "Классика. Сам шеф Мурзини сделаль)",
         price: 650,
-        image: "/menu/margherita.png",
+        image: margherita,
       },
       {
         name: "Карбонара",
         description: "Можете спросить, есть ли Карбонара, пока что непонятно",
         price: 600,
-        image: "/menu/carbonara.png",
+        image: carbonara,
       },
       {
         name: "Чизбургер",
-        description:
-          "Осмельтесь попросить у шефа чизбургер, и узрите его гнев ",
+        description: "Осмельтесь попросить у шефа чизбургер, и узрите его гнев ",
         price: 300,
-        image: "/menu/cheeseburger.png",
+        image: cheeseburger,
       },
       {
         name: "Овощной салат",
         description: "Просто по приколу",
         price: 400,
-
-        image: "/menu/salad.png",
+        image: salad,
       },
     ],
     desserts: [
@@ -39,25 +60,25 @@ function App() {
         name: "Чизкейк",
         description: "Нежный, как рассвет в Тоскане",
         price: 350,
-        image: "/menu/cheesecake.png",
+        image: cheesecake,
       },
       {
         name: "Торт Сникерс",
         description: "Ореховый, сладкий и мощный",
         price: 400,
-        image: "/menu/snickers.png",
+        image: snickers,
       },
       {
         name: "Торт Марс",
         description: "Больше шоколада — больше счастья",
         price: 400,
-        image: "/menu/mars.png",
+        image: mars,
       },
       {
         name: "Мороженое",
         description: "Шарик ванильный, клубничный или шоколадный",
         price: 200,
-        image: "/menu/icecream.png",
+        image: icecream,
       },
     ],
     drinks: [
@@ -65,58 +86,55 @@ function App() {
         name: "Чай",
         description: "Чёрный, зелёный — спроси у официанта",
         price: 150,
-        image: "/menu/tea.png",
+        image: tea,
       },
       {
         name: "Пиво",
         description: "Бланш или Бад, решим на месте",
         price: 300,
-        image: "/menu/beer.png",
+        image: beer,
       },
       {
         name: "Сидр",
         description: "Лёгкий, как весенний ветер",
         price: 300,
-
-        image: "/menu/cider.png",
+        image: cider,
       },
       {
         name: "Вино 0.125",
         description: "Любимое вино сами знаете кого...",
         price: 350,
-        image: "/menu/wine.png",
+        image: wine,
       },
       {
         name: "Фантазёр шот",
-        description:
-          "Синхронизация мыслей. Скорость реакции. Острота ума. Отрицание и гнев.",
+        description:  "Синхронизация мыслей. Скорость реакции. Острота ума. Отрицание и гнев.",
         price: 250,
-        image: "/menu/fantaser.png",
+        image: fantaser,
       },
       {
         name: "Коктейль 'Какашка'",
-        description:
-          "Только после 21:00. Может быть заказан только одним человеком.",
+        description: "Только после 21:00. Может быть заказан только одним человеком.",
         price: 400,
-        image: "/menu/kakashka.png",
+        image: kakashka,
       },
       {
         name: "Ягермейстер",
         description: "Если остались деньги",
         price: 500,
-        image: "/menu/jagermeister.png",
+        image: jagermeister,
       },
       {
         name: "Коло-мороженое",
         description: "Кола с шариком мороженого. Да-да",
         price: 220,
-        image: "/menu/cola.png",
+        image: cola,
       },
       {
         name: "Паровой коктейль",
         description: "Для душевной атмосферы",
         price: 600,
-        image: "/menu/hookah.png",
+        image: hookah,
       },
     ],
   };
