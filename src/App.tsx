@@ -3,15 +3,14 @@ import "./App.css";
 
 // Dishes
 import margherita from "/menu/margherita.png";
-import carbonara from "/menu/carbonara.png";
 import cheeseburger from "/menu/cheeseburger.png";
-import salad from "/menu/salad.png";
 
 // Desserts
 import cheesecake from "/menu/cheesecake.png";
 import snickers from "/menu/snickers.png";
 import mars from "/menu/mars.png";
 import icecream from "/menu/icecream.png";
+import denish from "/menu/denish.png";
 
 // Drinks
 import tea from "/menu/tea.png";
@@ -26,33 +25,23 @@ import hookah from "/menu/hookah.png";
 
 import italia from "/italian-background.jpeg?url";
 import murzini from "/murzini-transparent-logo.png?url";
+import MenuItem, { type MenuItemType } from "./MenuItem.tsx";
+import Coupon from "./Coupon.tsx";
 
 function App() {
   const menu = {
     dishes: [
       {
-        name: "Охуенная пицца",
-        description: "Классика. Сам шеф Мурзини сделаль)",
+        name: "Кинг Конг пицца и Шеф Мурзини",
+        description: "Классика. Сам шеф Мурзини заказал за додокоины)",
         price: 650,
         image: margherita,
       },
       {
-        name: "Карбонара",
-        description: "Можете спросить, есть ли Карбонара, пока что непонятно",
-        price: 600,
-        image: carbonara,
-      },
-      {
-        name: "Чизбургер",
-        description: "Осмельтесь попросить у шефа чизбургер, и узрите его гнев ",
-        price: 300,
+        name: "Чизик",
+        description: "Взял чизик за 35 все такие кааак?",
+        price: 35,
         image: cheeseburger,
-      },
-      {
-        name: "Овощной салат",
-        description: "Просто по приколу",
-        price: 400,
-        image: salad,
       },
     ],
     desserts: [
@@ -80,6 +69,12 @@ function App() {
         price: 200,
         image: icecream,
       },
+      {
+        name: "Спермиш",
+        description: "Великая булочка из поль-бейкери после 21:00 скидка 50%",
+        price: 140,
+        image: denish,
+      },
     ],
     drinks: [
       {
@@ -105,36 +100,106 @@ function App() {
         description: "Любимое вино сами знаете кого...",
         price: 350,
         image: wine,
+        reviews: [
+          {
+            author: "Тёмыч",
+            text: "Поверьте мне, это охуенное вино",
+            rating: 5,
+          },
+          {
+            author: "Светик",
+            text: "Мне так-то тоже понравилось",
+            rating: 5,
+          },
+        ],
       },
       {
         name: "Фантазёр шот",
-        description:  "Синхронизация мыслей. Скорость реакции. Острота ума. Отрицание и гнев.",
+        description:
+          "Синхронизация мыслей. Скорость реакции. Острота ума. Отрицание и гнев.",
         price: 250,
         image: fantaser,
+        reviews: [
+          {
+            author: "Шумский",
+            text: "Я уже в кондициях",
+            rating: 5,
+          },
+          {
+            author: "Диман",
+            text: "Я ЧЕ НЕ ДИМАН???",
+            rating: 5,
+          },
+          {
+            author: "Виктор Майорка",
+            text: "На вкус как будто бы что-то алкогольное, странная фанта)",
+            rating: 5,
+          },
+          {
+            author: "Бортпроводница",
+            text: "Да, конечно вы можете сесть рядом. А у вас фантазёр точно с водкой пять озёр?",
+            rating: 4,
+          },
+        ],
       },
       {
         name: "Коктейль 'Какашка'",
-        description: "Только после 21:00. Может быть заказан только одним человеком.",
+        description:
+          "Только после 21:00. Может быть заказан только одним человеком.",
         price: 400,
         image: kakashka,
+        reviews: [
+          {
+            author: "Шумский",
+            text: "Это че... *ик*... Несите мне мою член-трубочку...",
+            rating: 5,
+          },
+        ],
       },
       {
         name: "Ягермейстер",
         description: "Если остались деньги",
         price: 500,
         image: jagermeister,
+        reviews: [
+          {
+            author: "Диман",
+            text: "Странно, я вроде заказывал Джин Тоник...",
+            rating: 3,
+          },
+        ],
       },
       {
         name: "Коло-мороженое",
         description: "Кола с шариком мороженого. Да-да",
         price: 220,
         image: cola,
+        reviews: [
+          {
+            author: "Светик",
+            text: "Это наверное мой любимый напиток и вкус детства.",
+            rating: 5,
+          },
+        ],
       },
       {
         name: "Паровой коктейль",
         description: "Для душевной атмосферы",
         price: 600,
         image: hookah,
+        reviews: [
+          {
+            author: "Тёмыч",
+            text: "Хм, может мне кальянщиком работать? Мой главный секрет успеха? Делайте колодец",
+            rating: 5,
+          },
+
+          {
+            author: "Сержант из Сочинской части",
+            text: "Рядовой Волчарников делает просто прекрасные кальяны. Он у нас скоро поедет на соревнования по кальяноведению. Спасибо Серёга",
+            rating: 5,
+          },
+        ],
       },
     ],
   };
@@ -165,72 +230,34 @@ function App() {
         <section id="menu" className="menu-card">
           <h2>Меню</h2>
 
-          <div className="menu-category">
-            <h3>Блюда</h3>
-            {menu.dishes.map((item, index) => (
-              <div key={index} className="menu-item">
-                <div>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="menu-image"
-                  />
-                  <p>
-                    <strong>{item.name}</strong> — {item.description}
-                  </p>
-                </div>
-                <div>
-                  <p className="price">{item.price} ₽</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <MenuCategory title="Блюда" items={menu.dishes} />
 
-          <div className="menu-category">
-            <h3>Десерты</h3>
-            {menu.desserts.map((item, index) => (
-              <div key={index} className="menu-item">
-                <div>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="menu-image"
-                  />
-                  <p>
-                    <strong>{item.name}</strong> — {item.description}
-                  </p>
-                </div>
-                <div>
-                  <p className="price">{item.price} ₽</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <MenuCategory title="Десерты" items={menu.desserts} />
 
-          <div className="menu-category">
-            <h3>Напитки</h3>
-            {menu.drinks.map((item, index) => (
-              <div key={index} className="menu-item">
-                <div>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="menu-image"
-                  />
-                  <p>
-                    <strong>{item.name}</strong> — {item.description}
-                  </p>
-                </div>
-                <div>
-                  <p className="price">{item.price} ₽</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <MenuCategory title="Напитки" items={menu.drinks} />
         </section>
+
+        <Coupon />
       </main>
     </>
   );
 }
+
+const MenuCategory = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: MenuItemType[];
+}) => {
+  return (
+    <div className="menu-category">
+      <h3>{title}</h3>
+      {items.map((item, index) => (
+        <MenuItem key={index} {...item} />
+      ))}
+    </div>
+  );
+};
 
 export default App;

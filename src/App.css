@@ -1,6 +1,6 @@
 :root {
   --background-color: rgba(255, 255, 255, 0.85);
-  --accent-color: #b32d00;
+  --accent-color: #ff9f80;
   --text-color: #333;
   --font-family: "Georgia", serif;
 }
@@ -32,7 +32,7 @@
   padding: 2rem;
 }
 
-.menu-card, .welcome-card {
+.coupons-card, .welcome-card {
   background: var(--background-color);
   padding: 2.5rem 3rem;
   border-radius: 16px;
@@ -64,26 +64,4 @@
   color: var(--accent-color);
   margin-top: 1.5rem;
   font-weight: bold;
-}
-
-.menu-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
-}
-
-.menu-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-content {
-  flex-grow: 1;
 }
