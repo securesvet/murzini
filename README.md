@@ -1,19 +1,3 @@
-# Vite + Deno + React + TypeScript
+[![Deploy to GitHub Pages](https://github.com/securesvet/murzini/actions/workflows/deploy.yml/badge.svg)](https://github.com/securesvet/murzini/actions/workflows/deploy.yml)
 
-## Running
-
-You need to have Deno v2.0.0 or later installed to run this repo.
-
-Start a dev server:
-
-```
-$ deno task dev
-```
-
-## Deploy
-
-Build production assets:
-
-```
-$ deno task build
-```
+# Murzini Restaurant
