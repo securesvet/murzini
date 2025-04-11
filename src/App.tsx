@@ -12,6 +12,7 @@ import snickers from "/menu/snickers.png";
 import mars from "/menu/mars.png";
 import icecream from "/menu/icecream.png";
 import denish from "/menu/denish.png";
+import ketchup from "/menu/ketchup.png";
 
 // Drinks
 import tea from "/menu/tea.png";
@@ -54,7 +55,7 @@ function App() {
         </div>
 
         <section id="menu" className="menu-card">
-          <h2>Меню</h2>
+          <h1 className="title-menu">Меню</h1>
 
           <MenuCategory title="Блюда" items={menu.dishes} />
 
@@ -78,7 +79,7 @@ const MenuCategory = ({
 }) => {
   return (
     <div className="menu-category">
-      <h3>{title}</h3>
+      <h3 className="title">{title}</h3>
       {items.map((item, index) => (
         <MenuItem key={index} {...item} />
       ))}
@@ -144,6 +145,12 @@ const menu = {
       description: "Великая булочка из поль-бейкери после 21:00 скидка 50%",
       price: 140,
       image: denish,
+    },
+    {
+      name: "Кетчуп",
+      description: "КЕТЧУП? ДА НУ НАХУЙ ЭТО КЕТЧУП!",
+      price: 100,
+      image: ketchup,
     },
   ],
   drinks: [
